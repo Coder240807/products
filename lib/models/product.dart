@@ -9,7 +9,7 @@ class Product {
     return Product(
       title: json['title'],
       price: json['price'],
-      image: json['images'],
+      image: json['images'][0],
     );
   }
 }

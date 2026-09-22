@@ -11,7 +11,7 @@ class Api {
     );
     if (response.statusCode == 200) {
       final Map<String, dynamic> data = jsonDecode(response.body);
-      final List<dynamic> list = data['products'];
+      final List list = data['products'];
       return list.map((item) => Product.fromJson(item)).toList();
     }
     throw Exception('Error');
